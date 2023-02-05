@@ -8,6 +8,16 @@ echo "Downloading .tmux.conf"
 cd ~/
 wget https://github.com/gaurav18115/dotfiles/blob/main/.tmux.conf
 
+
+echo 'if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi' >> ~/.bashrc
+
+source ~/.bashrc
+
+
+
+
 echo "Installing oh-my-zsh"
 rm -rf ~/.oh-my-zsh
 yes | sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
