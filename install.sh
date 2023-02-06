@@ -4,9 +4,9 @@ echo "Installing tmux"
 sudo apt-get update 
 sudo apt-get install tmux -y
 
-echo "Downloading .tmux.conf"
-cd ~/
-wget https://github.com/gaurav18115/dotfiles/blob/main/.tmux.conf
+# echo "Downloading .tmux.conf"
+# cd ~/
+# wget https://github.com/gaurav18115/dotfiles/blob/main/.tmux.conf
 
 
 echo 'if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
@@ -14,8 +14,6 @@ echo 'if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
 fi' >> ~/.bashrc
 
 source ~/.bashrc
-
-
 
 
 echo "Installing oh-my-zsh"
