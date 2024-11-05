@@ -21,9 +21,3 @@ rm -rf ~/.oh-my-zsh
 yes | sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 zsh
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="afowler"/' ~/.zshrc
-
-echo "Installing Chrome driver"
-sudo apt-get install chromium-driver -y
-
-echo "Installing firefox"
-sudo apt-get install firefox -y
